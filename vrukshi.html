@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Vrukshi Agrotech</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 20px 0;
+    }
+    header img {
+      height: 100px;
+      margin-bottom: 10px;
+    }
+    nav {
+      background-color: #fff;
+      text-align: center;
+      padding: 10px 0;
+    }
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #333;
+      font-weight: bold;
+      cursor: pointer;
+    }
+    section {
+      display: none;
+      padding: 20px;
+      text-align: center;
+    }
+    .services {
+      display: flex;
+      justify-content: space-around;
+      flex-wrap: wrap;
+    }
+    .service-box {
+      background-color: #fff;
+      width: 30%;
+      padding: 20px;
+      margin: 10px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    .contact-form input, .contact-form textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 10px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+    }
+    .contact-form button {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 20px;
+      border: none;
+      cursor: pointer;
+    }
+    footer {
+      background-color: #4CAF50;
+      color: white;
+      text-align: center;
+      padding: 10px 0;
+      margin-top: 20px;
+    }
+    .team-member, .testimonial, .product, .faq {
+      background: #fff;
+      margin: 10px auto;
+      padding: 15px;
+      max-width: 800px;
+      box-shadow: 0 0 5px rgba(0,0,0,0.1);
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <img src="logo.jpg" alt="Vrukshi Agrotech Logo">
+  <h1>Vrukshi Agrotech</h1>
+  <p>Innovative solutions for agriculture and technology</p>
+</header>
+
+<nav>
+  <a onclick="showSection('about')">About</a>
+  <a onclick="showSection('services')">Services</a>
+  <a onclick="showSection('products')">Products</a>
+  <a onclick="showSection('team')">Team</a>
+  <a onclick="showSection('testimonials')">Testimonials</a>
+  <a onclick="showSection('gallery')">Gallery</a>
+  <a onclick="showSection('careers')">Careers</a>
+  <a onclick="showSection('faq')">FAQ</a>
+  <a onclick="showSection('contact')">Contact</a>
+</nav>
+
+<section id="about">
+  <h2>Mission</h2>
+  <p>To revolutionize agriculture with innovative, affordable, and sustainable embedded solutions.</p>
+  <h2>Vision</h2>
+  <p>To be a trusted leader in agri-tech, empowering farmers with smart, accessible, impactful solutions.</p>
+</section>
+
+<section id="services">
+  <h2>Our Services</h2>
+  <div class="services">
+    <div class="service-box">
+      <h3>Product Development</h3>
+      <p>We create agricultural tools and solutions to boost productivity.</p>
+    </div>
+    <div class="service-box">
+      <h3>Consulting</h3>
+      <p>Expert advice to guide you through the agri-tech industry.</p>
+    </div>
+    <div class="service-box">
+      <h3>Technology Integration</h3>
+      <p>We help integrate modern technology into your operations.</p>
+    </div>
+  </div>
+</section>
+
+<section id="products">
+  <h2>Our Products</h2>
+  <div class="product">
+    <h3>Smart Irrigation System</h3>
+    <p>Automated irrigation with weather sensing and water-saving features.</p>
+  </div>
+  <div class="product">
+    <h3>Soil Health Monitor</h3>
+    <p>Real-time soil analysis for better crop planning.</p>
+  </div>
+</section>
+
+<section id="team">
+  <h2>Meet Our Team</h2>
+  <div class="team-member">
+    <h3>Shashikanth</h3>
+    <p>Founder & CEO</p>
+  </div>
+  <div class="team-member">
+    <h3>Sneha Reddy</h3>
+    <p>Chief Agronomist</p>
+  </div>
+</section>
+
+<section id="testimonials">
+  <h2>What Our Clients Say</h2>
+  <div class="testimonial">
+    <p>"Vrukshi Agrotech helped us double our crop yield with smart sensors."</p>
+    <p>- Farmer in Telangana</p>
+  </div>
+</section>
+
+<section id="gallery">
+  <h2>Gallery</h2>
+  <img src="farm1.jpg" alt="Farm Field" width="300">
+  <img src="tech-device.jpg" alt="Tech Device" width="300">
+</section>
+
+<section id="careers">
+  <h2>Careers</h2>
+  <p>We are hiring! Join us in transforming agriculture. Send your resume to careers@vrukshiagrotech.com</p>
+</section>
+
+<section id="faq">
+  <h2>Frequently Asked Questions</h2>
+  <div class="faq">
+    <h4>Q: How can I order a product?</h4>
+    <p>A: Email us or use the contact form below.</p>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact Us</h2>
+  <p>Email: contact@vrukshiagrotech.com</p>
+  <p>Phone: +91-6281472151</p>
+  <form class="contact-form">
+    <input type="text" placeholder="Your Name" required>
+    <input type="email" placeholder="Your Email" required>
+    <textarea placeholder="Your Message" rows="3" required></textarea>
+    <button type="submit">Submit</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 Vrukshi Agrotech | All rights reserved.</p>
+</footer>
+
+<script>
+  function showSection(id) {
+    document.querySelectorAll('section').forEach(s => s.style.display = 'none');
+    document.getElementById(id).style.display = 'block';
+  }
+  window.onload = () => showSection('about');
+</script>
+
+</body>
+</html>
